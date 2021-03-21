@@ -102,9 +102,9 @@ def main():
 
     print(f"{HRULE}\nHere are the job id's that are easy to apply:\n{HRULE}")
     for e in easyLinks:
-        print(job['id'], end=', ')
+        print(e, end=', ')
         with open('easyApplyLinks.csv', 'a') as f:
-            f.write(f"{job['id']}, ")
+            f.write(f"{e}, ")
     print(f"\n{HRULE}\nHere is the list of unique employer questions\n{HRULE}")
     for k in Questionnaire.keys():
         print(Questionnaire[k]['text'])
